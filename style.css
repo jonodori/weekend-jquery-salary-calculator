@@ -1,0 +1,16 @@
+header {
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: Helvetica;
+    background-color: lightgray;
+}
+
+.employees {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: Helvetica;
+}
