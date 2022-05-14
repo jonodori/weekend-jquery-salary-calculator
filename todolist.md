@@ -8,9 +8,9 @@
 
 [x] Needs submit button 
 
-[ ] Calculate Monthly cost 
+[x] Calculate Monthly cost 
 
-[ ] If it exceeds $20000 add red background
+[x] If it exceeds $20000 add red background
 
 [ ] Create a delete button, removes employee from the DOM
     (Does not remove Employee's salary)
