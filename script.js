@@ -22,7 +22,7 @@ let newEmployee = {
 }
 
     //empty inputs
-    $('#movie-name').val('');
+    $('#first-name').val('');
     $('#last-name').val('');
     $('#id-number').val('');
     $('#job-title').val('');
