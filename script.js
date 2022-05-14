@@ -3,31 +3,48 @@ console.log('js loaded!');
 
 $(document).ready(handleReady)
 
+let employees = [];
+
 function handleReady(){
     $(document).on('click', '#submit-btn', onSubmit);
 }
 
 function onSubmit(){
-    let firstName = $('#first-name').val();
-    let lastName = $('#last-name').val();
-    let idNumber = $('#id-number').val();
-    let jobTitle = $('#job-title').val();
-    let AnnualSalary = $('#annual-salary').val();
 
-    $('#salary-table').append(`
-    <tr>
-                <td>${firstName}</td>
-                <td>${lastName}</td>
-                <td>${idNumber}</td>
-                <td>${jobTitle}</td>
-                <td>$${AnnualSalary}</td>
-            </tr>
-    `);
+//created an object to push to employees
+let newEmployee = {    
+    firstName: $('#first-name').val(),
+    lastName: $('#last-name').val(),
+    idNumber: $('#id-number').val(),
+    jobTitle: $('#job-title').val(),
+    AnnualSalary: $('#annual-salary').val()
+}
 
+    //empty inputs
     $('#movie-name').val('');
     $('#last-name').val('');
     $('#id-number').val('');
     $('#job-title').val('');
     $('#annual-salary').val('');
 
+employees.push(newEmployee);
+
+
+    $('#salary-table').append(`
+    <tr>
+                <td>${newEmployee.firstName}</td>
+                <td>${newEmployee.lastName}</td>
+                <td>${newEmployee.idNumber}</td>
+                <td>${newEmployee.jobTitle}</td>
+                <td>${newEmployee.AnnualSalary}</td>
+            </tr>
+    `);
+
+for(let salary of employees){
+    let totalSalary = 0;
+    totalSalary += (salary.AnnualSalary);
+    console.log(totalSalary);
+    }
 }
+
+
