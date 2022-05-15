@@ -7,7 +7,7 @@ let employees = [];
 
 function handleReady(){
     $(document).on('click', '#submit-btn', onSubmit);
-    $(document).on('click', '.delete-btn', onDelete)
+    $(document).on('click', '#delete-btn', onDelete)
 }
 
 function onSubmit(){
@@ -40,9 +40,7 @@ console.log(employees);
                 <td>${newEmployee.jobTitle}</td>
                 <td>$${newEmployee.AnnualSalary}</td>
                 <td>
-                <button class="delete-btn">
-                    delete
-                </button>
+                <button type="button" class="btn btn-warning" id="delete-btn">Delete</button>
                 </td>
             </tr>
     `);
@@ -63,7 +61,7 @@ for(let salary of employees){
     console.log(totalSalary); //test for totalSalary
     }
 
-    totalMonthly += (totalSalary / 12); // divide total, += adds up total that was divided by 12, rounded the number
+    totalMonthly += (totalSalary / 12).toFixed(2); // divide total, += adds up total that was divided by 12, rounded the number
     console.log(totalMonthly); //test for totalMonthly
 
     let el = $('#total-monthly'); //created variable to append and empty 
@@ -71,8 +69,9 @@ for(let salary of employees){
         el.text(totalMonthly); 
 
     if (totalMonthly> 20000){
-        document.body.style.backgroundColor = "red"
-
+        $('#total-monthly').parent().addClass('toohigh');
+        //removeClass if it's too low 
+        // document.body.style.backgroundColor = "red"
     }
 }
 
