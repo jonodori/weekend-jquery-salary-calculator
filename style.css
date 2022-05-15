@@ -3,9 +3,8 @@ header {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 30px;
-    font-family: Helvetica;
     background-color: lightgray;
+    
 }
 
 .employees {
@@ -13,4 +12,11 @@ header {
     margin-bottom: 20px;
     font-size: 30px;
     font-family: Helvetica;
+}
+
+p {
+    text-align: right;
+    margin-right: 50px;
+    font-family: Helvetica;
+    font-size: 20px;
 }

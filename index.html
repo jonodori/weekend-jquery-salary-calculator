@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.0.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <title>Weekend Jquery Salary Calculator</title>
 </head>
 <body>
-    <header>
-    Salary Calculator    
+    <header class="jumbotron">
+        <h1>Salary Calculator</h1>
     </header>
     <input type="text" placeholder="first name" id="first-name" />
     <input type="text" placeholder="last name" id="last-name" />
@@ -23,7 +24,7 @@
     
     <div class = "employees">Employees</div>
 
-    <table class = "table">
+    <table class = "table table-hover"> 
         <thead>
             <tr>
                 <th>First Name</th>

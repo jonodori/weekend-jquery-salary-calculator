@@ -29,7 +29,7 @@ let newEmployee = {
     $('#annual-salary').val('');
 
 employees.push(newEmployee);
-
+console.log(employees);
 
 
     $('#salary-table').append(`
@@ -63,7 +63,7 @@ for(let salary of employees){
     console.log(totalSalary); //test for totalSalary
     }
 
-    totalMonthly += totalSalary / 12; // divide total, += adds up total that was divided by 12
+    totalMonthly += (totalSalary / 12); // divide total, += adds up total that was divided by 12, rounded the number
     console.log(totalMonthly); //test for totalMonthly
 
     let el = $('#total-monthly'); //created variable to append and empty 
@@ -79,7 +79,7 @@ for(let salary of employees){
 
 
 function onDelete(){
-    let tr = $(this).parent().parent();
+    let tr = $(this).parents('tr'); // parents('tr') removes table 
 
     tr.remove();
 }
